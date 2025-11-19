@@ -2,11 +2,11 @@ import "server-only";
 import nodemailer from "nodemailer";
 
 export const transporter = nodemailer.createTransport({
-  host: process.env.NEXT_PUBLIC_SMTP_HOST,
-  port: Number(process.env.NEXT_PUBLIC_SMTP_PORT),
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
   secure: false,
   auth: {
-    user: process.env.NEXT_PUBLIC_SMTP_USER,
-    pass: process.env.NEXT_PUBLIC_SMTP_PASS,
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
